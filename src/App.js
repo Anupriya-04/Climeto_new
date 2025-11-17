@@ -11,6 +11,7 @@ import Contactus from "./Contactus/Contactus.jsx";
 import Footer from "./footer/footer";
 import Navbar from "./Navbar";
 import ScrollToTop from "./ScrollToTop.jsx";
+import ClimetoMedia from "./Climetomedia.jsx";
 // Credits
 import CarbonCredits from "./Services/Credits/CarbonCredits";
 import GreenCredits from "./Services/Credits/greenCredits.jsx";
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/climeto-media" element={<ClimetoMedia />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contactus />} />
           <Route path="/revised-guide" element={<RevisedGuidePage />} />

@@ -549,6 +549,49 @@ const Navbar = () => {
           >
             Blog
           </Link>
+
+         
+          <Link 
+            to="/climeto-media" 
+            onClick={closeMobileMenu}
+            style={{
+              textDecoration: 'none',
+              color: '#1b355e',
+              fontSize: '15px',
+              fontWeight: '500',
+              padding: '6px 10px',
+              borderRadius: '6px',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.color = '#36a852';
+              e.target.style.backgroundColor = '#f0fdf4';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = '#1b355e';
+              e.target.style.backgroundColor = 'transparent';
+            }}
+          >
+            Climeto Media
+          </Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           
           <Link 
             to="/career" 
