@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Leaf, Target, Eye, Heart, Users, Award, TrendingUp, Shield, BookOpen, Zap, Linkedin, ArrowDown, Sparkles, Globe, CircleDot } from 'lucide-react';
+import { Leaf, Target, Eye, Heart, Users, Award, TrendingUp, Shield, BookOpen, Zap, Linkedin, ArrowDown, Sparkles, Globe, ChevronLeft, ChevronRight } from 'lucide-react';
 import Climetobanner1 from "../assets/images/Climetobanner1.jpg";
 import a2 from "../assets/images/a2.jpg";
 import a3 from "../assets/images/a3.jpg";
@@ -8,11 +9,41 @@ import a5 from "../assets/images/a5.jpg";
 import a6 from "../assets/images/a6.jpg";
 import a7 from "../assets/images/a7.jpg";
 import a8 from "../assets/images/a8.jpeg";
+import ab6 from "../assets/images/aboutus.jpeg";
+import ab7 from "../assets/images/aboutus2.jpeg";
+import d1 from "../assets/images/Devesh.png";
+import d2 from "../assets/images/Keshav.png"
+import ab9 from "../assets/images/ab7.jpg";
+import introVideo from "../assets/images/iconvedio.mp4";
+
 export default function ClimetoAboutPage() {
   const [scrollY, setScrollY] = useState(0);
   const [activeYear, setActiveYear] = useState(null);
   const [isVisible, setIsVisible] = useState({});
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const sectionRefs = useRef({});
+
+  // Carousel images
+   const carouselItems = [
+    { type: "video", src: introVideo },
+    { type: "image", src: ab7 },
+    { type: "image", src: ab9 },
+    { type: "image", src: ab6 },
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselItems.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselItems.length) % carouselItems.length);
+  };
+
+  // Auto-advance carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(nextImage, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +63,6 @@ export default function ClimetoAboutPage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const values = [
     { icon: Heart, title: "Integrity in Impact", desc: "Creating environmental change that's real, measurable, and honest.", color: "from-green-400 to-emerald-500" },
     { icon: Zap, title: "Innovation with Intention", desc: "Finding smarter, scalable sustainability solutions.", color: "from-blue-400 to-sky-500" },
@@ -56,9 +86,9 @@ export default function ClimetoAboutPage() {
   ];
 
   const leaders = [
-    { name: "Leadership Team", role: "Directors", linkedin: "#" },
-    { name: "Leadership Team", role: "Directors", linkedin: "#" },
-    { name: "Leadership Team", role: "Directors", linkedin: "#" }
+    { name: "Devesh Malu", role: "Directors",src: d1, linkedin: "#" },
+    { name: "Keshav Bhootda", role: "Directors",src: d2, linkedin: "#" },
+    
   ];
 
   const partners = ["CPCB", "CII", "ISO", "Partner 1", "Partner 2", "Partner 3"];
@@ -127,20 +157,54 @@ export default function ClimetoAboutPage() {
       </div>
 
       {/* Who We Are */}
-      <section ref={el => sectionRefs.current['who'] = el} className="py-24 px-6 bg-white">
+     <section ref={el => sectionRefs.current['who'] = el} className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${isVisible['who'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="relative group h-[600px]">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-teal-400 to-blue-400 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-all duration-500 opacity-80"></div>
               <div className="relative bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl h-full overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <Leaf className="w-48 h-48 text-green-600 opacity-20" />
+                <div className="absolute inset-0 flex items-center justify-center p-8">
+                  <div className="w-full">
+
+
+{/* Carousel Section */}
+<div className="relative w-full h-[500px] overflow-hidden rounded-xl">
+{carouselItems[currentImageIndex].type === "image" ? (
+<img
+src={carouselItems[currentImageIndex].src}
+className="w-full h-full object-cover transition-all duration-700"
+alt="carousel"
+/>
+) : (
+<video
+src={carouselItems[currentImageIndex].src}
+className="w-full h-full object-cover rounded-xl"
+autoPlay
+muted
+loop
+/>
+)}
+
+
+<button
+onClick={prevImage}
+className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+>
+<ChevronLeft size={30} />
+</button>
+
+
+<button
+onClick={nextImage}
+className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+>
+<ChevronRight size={30} />
+</button>
+</div>
                   </div>
                 </div>
-                <Globe className="absolute top-20 right-20 w-12 h-12 text-teal-500 opacity-40 animate-float" />
-                <Target className="absolute bottom-20 left-20 w-12 h-12 text-blue-500 opacity-40 animate-float" style={{animationDelay: '1s'}} />
-                <Sparkles className="absolute top-1/2 left-20 w-10 h-10 text-green-400 opacity-30 animate-float" style={{animationDelay: '2s'}} />
+                <Globe className="absolute top-4 right-4 w-8 h-8 text-teal-500 opacity-40 animate-float" />
+                <Target className="absolute bottom-4 left-4 w-8 h-8 text-blue-500 opacity-40 animate-float" style={{animationDelay: '1s'}} />
               </div>
             </div>
             
@@ -282,42 +346,112 @@ export default function ClimetoAboutPage() {
       </section>
 
       {/* Message from Directors */}
-      <section ref={el => sectionRefs.current['message'] = el} className="py-24 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
-        <div className={`max-w-5xl mx-auto transition-all duration-1000 ${isVisible['message'] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="relative group">
-            <div className="relative bg-white p-12 md:p-16 rounded-3xl shadow-2xl border-l-8 border-amber-400">
-              <div className="absolute top-0 left-0 w-32 h-32 opacity-10">
-                <svg viewBox="0 0 100 100">
-                  <text x="10" y="80" fontSize="120" fill="rgb(251, 191, 36)" fontFamily="serif">"</text>
-                </svg>
+     
+<section
+  ref={(el) => (sectionRefs.current["message"] = el)}
+  className="py-24 px-6 bg-gradient-to-br from-amber-50 to-orange-50"
+>
+  <div
+    className={`max-w-5xl mx-auto transition-all duration-1000 ${
+      isVisible["message"] ? "opacity-100 scale-100" : "opacity-0 scale-95"
+    }`}
+  >
+    <div className="relative group">
+      <div className="relative bg-white p-12 md:p-16 rounded-3xl shadow-2xl border-l-8 border-amber-400">
+        {/* opening quotes */}
+        <div className="absolute top-0 left-0 w-32 h-32 opacity-10">
+          <svg viewBox="0 0 100 100">
+            <text
+              x="10"
+              y="80"
+              fontSize="120"
+              fill="rgb(251, 191, 36)"
+              fontFamily="serif"
+            >
+              "
+            </text>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-0 right-0 w-32 h-32 opacity-10 rotate-180">
+          <svg viewBox="0 0 100 100">
+            <text
+              x="10"
+              y="80"
+              fontSize="120"
+              fill="rgb(251, 191, 36)"
+              fontFamily="serif"
+            >
+              "
+            </text>
+          </svg>
+        </div>
+
+        <div className="relative">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-serif">
+            Message from the Directors
+          </h2>
+
+          <div className="space-y-6 text-gray-700 leading-relaxed text-lg font-serif">
+            <p className="text-amber-600 text-xl font-semibold">
+              Dear Partners, Clients, and Changemakers,
+            </p>
+
+            <p>
+              Climeto began with a simple purpose — to make sustainability
+              measurable and meaningful. From our early work in plastic credits
+              and EPR systems to advancing data-driven climate solutions, our
+              journey has always been guided by one belief: real change begins
+              with responsibility.
+            </p>
+
+            <p>
+              Over the years, we've helped organizations recover and recycle
+              thousands of tonnes of plastic waste, supported worker
+              livelihoods, and contributed to shaping sustainability practices at
+              local and national levels.
+            </p>
+
+            <p>
+              Today, through our work in carbon credit trading, sustainability
+              solutions, and global climate markets, we continue to empower
+              businesses to turn environmental responsibility into measurable,
+              lasting impact.
+            </p>
+
+            <p className="text-xl font-semibold text-gray-900">
+              Together, we move toward a circular and climate-resilient future.
+            </p>
+
+            <p className="mt-8 italic text-amber-700 text-xl">
+              — The Directors, Climeto Sustainability Pvt. Ltd.
+            </p>
+          </div>
+
+          {/* Directors Photos */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
+            {leaders.map((leader, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <img
+                  src={leader.src}
+                  alt={leader.name}
+                  className="w-36 h-36 object-cover rounded-full shadow-lg"
+                />
+                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                  {leader.name}
+                </h3>
+                <p className="text-amber-600">{leader.role}</p>
               </div>
-              <div className="absolute bottom-0 right-0 w-32 h-32 opacity-10 rotate-180">
-                <svg viewBox="0 0 100 100">
-                  <text x="10" y="80" fontSize="120" fill="rgb(251, 191, 36)" fontFamily="serif">"</text>
-                </svg>
-              </div>
-              
-              <div className="relative">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-serif">Message from the Directors</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg font-serif">
-                  <p className="text-amber-600 text-xl font-semibold">Dear Partners, Clients, and Changemakers,</p>
-                  <p>
-                    Climeto began with a simple purpose — to make sustainability measurable and meaningful. From our early work in plastic credits and EPR systems to advancing data-driven climate solutions, our journey has always been guided by one belief: real change begins with responsibility.
-                  </p>
-                  <p>
-                    Over the years, we've helped organizations recover and recycle thousands of tonnes of plastic waste, supported worker livelihoods, and contributed to shaping sustainability practices at local and national levels.
-                  </p>
-                  <p>
-                    Today, through our work in carbon credit trading, sustainability solutions, and global climate markets, we continue to empower businesses to turn environmental responsibility into measurable, lasting impact.
-                  </p>
-                  <p className="text-xl font-semibold text-gray-900">Together, we move toward a circular and climate-resilient future.</p>
-                  <p className="mt-8 italic text-amber-700 text-xl">— The Directors, Climeto Sustainability Pvt. Ltd.</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>;
 
       {/* Core Principles */}
       <section ref={el => sectionRefs.current['principles'] = el} className="py-24 px-6 bg-white">
@@ -359,7 +493,7 @@ export default function ClimetoAboutPage() {
             </h2>
           </div>
           
-          <div className={`grid md:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible['leadership'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <div className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${isVisible['leadership'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             {leaders.map((leader, idx) => (
               <div key={idx} className="group relative">
                 <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
