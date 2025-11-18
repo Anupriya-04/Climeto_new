@@ -316,7 +316,7 @@ const instagramPosts = [
         <div className="text-center mb-20 opacity-0" style={{ animation: 'fadeInUp 0.6s ease-out 0.2s forwards' }}>
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-semibold border border-green-300">
-              🌿 Connects With Us
+              🌿 Connect With Us
             </span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold text-green-800 mb-6">
