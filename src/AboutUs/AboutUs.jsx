@@ -86,8 +86,8 @@ export default function ClimetoAboutPage() {
   ];
 
   const leaders = [
-    { name: "Devesh Malu", role: "Directors",src: d1, linkedin: "#" },
-    { name: "Keshav Bhootda", role: "Directors",src: d2, linkedin: "#" },
+    { name: "Devesh Malu", role: "Directors",src: d1, linkedin: "https://www.linkedin.com/in/deveshmalu/" },
+    { name: "Keshav Bhootda", role: "Directors",src: d2, linkedin: "https://www.linkedin.com/in/keshavbhootda/" },
     
   ];
 
@@ -429,7 +429,7 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
           </div>
 
           {/* Directors Photos */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {/* <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
             {leaders.map((leader, index) => (
               <div
                 key={index}
@@ -446,7 +446,7 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
                 <p className="text-amber-600">{leader.role}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -482,41 +482,61 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
       </section>
 
       {/* Leadership */}
-      <section ref={el => sectionRefs.current['leadership'] = el} className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <span className="px-4 py-2 bg-blue-100 border border-blue-300 rounded-full text-blue-700 text-sm font-semibold inline-block mb-6">
-              MEET THE TEAM
-            </span>
-            <h2 className="text-6xl font-bold text-gray-900">
-              Leadership Team
-            </h2>
-          </div>
+   <section ref={el => sectionRefs.current['leadership'] = el} className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-20">
+      <span className="px-4 py-2 bg-blue-100 border border-blue-300 rounded-full text-blue-700 text-sm font-semibold inline-block mb-6">
+        MEET THE TEAM
+      </span>
+      <h2 className="text-6xl font-bold text-gray-900">
+        Leadership Team
+      </h2>
+    </div>
+    
+    <div className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${isVisible['leadership'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+      {leaders.map((leader, idx) => (
+        <div key={idx} className="group relative">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            {/* Leader Image - Changed to object-top for better head visibility */}
           
-          <div className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${isVisible['leadership'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            {leaders.map((leader, idx) => (
-              <div key={idx} className="group relative">
-                <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div className="bg-gradient-to-br from-green-100 to-teal-100 h-96 flex items-center justify-center">
-                    <Users className="w-32 h-32 text-green-600 opacity-30" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
-                    <div className="text-white w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-3xl font-bold mb-2">{leader.name}</h3>
-                      <p className="text-green-300 mb-4 text-lg">{leader.role}</p>
-                      <a href={leader.linkedin} className="inline-flex items-center gap-2 text-sm hover:text-green-300 transition-colors group/link">
-                        <Linkedin className="w-5 h-5 group-hover/link:scale-110 transition-transform" />
-                        Connect on LinkedIn
-                      </a>
-                    </div>
-                  </div>
-                </div>
+          
+          <img 
+             src={leader.src} 
+         alt={leader.name}
+             className="w-full h-[600px] object-contain bg-gradient-to-br from-green-50 to-teal-50 transition-transform duration-700 group-hover:scale-105"
+
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'flex';
+              }}
+            />
+            {/* Fallback placeholder if image doesn't load */}
+            <div className="hidden bg-gradient-to-br from-green-100 to-teal-100 h-[500px] items-center justify-center">
+              <Users className="w-32 h-32 text-green-600 opacity-30" />
+            </div>
+            
+            {/* Always visible name card at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 via-gray-900/95 to-transparent p-8">
+              <div className="text-white">
+                <h3 className="text-3xl font-bold mb-2">{leader.name}</h3>
+                <p className="text-green-300 mb-3 text-lg">{leader.role}</p>
+                <a 
+                  href={leader.linkedin} 
+                  className="inline-flex items-center gap-2 text-sm hover:text-green-300 transition-colors group/link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="w-5 h-5 group-hover/link:scale-110 transition-transform" />
+                  Connect on LinkedIn
+                </a>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* Certifications & Partnerships */}
       <section ref={el => sectionRefs.current['partners'] = el} className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">

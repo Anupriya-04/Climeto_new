@@ -39,15 +39,20 @@ const Navbar = () => {
         gap: '40px'
       }}>
         {/* Logo */}
-        <div style={{
+        <div className="nav-logo" style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px'
+          gap: '8px',
+          flexShrink: 0
         }}>
           <img 
             src="/Climeto-Transparent.png" 
             alt="Climeto Logo" 
-            style={{ height: '70px', margin: 0 }}
+            style={{ 
+              height: '70px', 
+              margin: 0,
+              objectFit: 'contain'
+            }}
           />
         </div>
 
@@ -60,7 +65,8 @@ const Navbar = () => {
             justifyContent: 'space-between',
             width: '28px',
             height: '22px',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            marginLeft: 'auto'
           }}
           className="hamburger"
         >
@@ -574,25 +580,6 @@ const Navbar = () => {
           >
             Climeto Media
           </Link>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
           <Link 
             to="/career" 
             onClick={closeMobileMenu}
@@ -630,12 +617,14 @@ const Navbar = () => {
               gap: 10px !important;
               background-color: white;
               position: absolute;
-              top: 80px;
+              top: 90px;
               left: 0;
               width: 100%;
               padding: 20px;
               box-shadow: 0 4px 20px rgba(0,0,0,0.1);
               margin-left: 0 !important;
+              max-height: calc(100vh - 90px);
+              overflow-y: auto;
             }
             
             .dropdown-menu {
@@ -650,17 +639,31 @@ const Navbar = () => {
               margin-left: 20px !important;
               box-shadow: none !important;
             }
+            
+            .nav-logo img {
+              height: 60px !important;
+            }
           }
           
           @media (max-width: 768px) {
             .nav-logo img {
-              height: 60px !important;
+              height: 55px !important;
             }
           }
           
           @media (max-width: 480px) {
             .nav-logo img {
               height: 50px !important;
+            }
+            
+            header > div {
+              padding: 0 16px !important;
+            }
+          }
+          
+          @media (max-width: 360px) {
+            .nav-logo img {
+              height: 45px !important;
             }
           }
         `}</style>

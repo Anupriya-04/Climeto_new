@@ -239,7 +239,7 @@ const instagramPosts = [
   },
   {
     videoId: '1b-0Kqi1Eog',
-    title: '💰 What if Carbon Could Earn You Money? | Carbon Market Explained',
+    title: '💰 What if Carbon Could Earn You Money? | Carbon Market Explained |  The Climeto TV Podcast',
     views: '8K'
   }
 ];
