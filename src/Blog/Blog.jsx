@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Calendar, Clock, ArrowRight, Leaf, Droplet, TreePine, Recycle } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 import blogImg from "../assets/images/blog.png";
 // Environmental blog data
 const allBlogs = [
-  {
-    id: 1,
-    title: "Article 6 of the Paris Agreement & Carbon Markets: Detailed Guide for 2025",
-    excerpt: " Carbon markets are no longer just a policy discussion — they are becoming the backbone of how countries and businesses plan to reach net zero emissions.",
-    image: blogImg,
-    category: "Climate Action",
-    date: "Nov 15, 2025",
-    readTime: "5 min read",
-    author: "Devesh Malu",
-    icon: "leaf"
-  },
+{
+  id: 1,
+  title: "Article 6 of the Paris Agreement & Carbon Markets: Detailed Guide for 2025",
+  excerpt: "Carbon markets are no longer just a policy discussion — they are becoming the backbone of how countries and businesses plan to reach net zero emissions.",
+  image: blogImg,
+  category: "Climate Action",
+  date: "Nov 15, 2025",
+  readTime: "5 min read",
+  author: "Devesh Malu",
+  icon: "leaf",
+  route: "/paris",
+},
+
   {
     id: 2,
     title: "Ocean Conservation: Protecting Marine Life",
@@ -245,10 +248,13 @@ const BlogPage = () => {
                   <span className="text-sm text-gray-700 font-medium">
                     {blog.author}
                   </span>
-                  <span className="text-green-600 font-medium flex items-center group-hover:translate-x-1 transition-transform">
-                    Read more
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </span>
+                 <Link
+  to={blog.route}
+  className="text-green-600 font-medium flex items-center group-hover:translate-x-1 transition-transform cursor-pointer"
+>
+  Read more
+  <ArrowRight className="w-4 h-4 ml-1" />
+</Link>
                 </div>
               </div>
             </article>

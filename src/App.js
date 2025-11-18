@@ -28,6 +28,11 @@ import Carbon from "./Services/carbon";
 import Netzero from "./Services/Netzero";
 import Plastic from "./Services/Plastic";
 
+//blogs pages
+
+
+import Article6Blog from "./Blog/paris";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -57,6 +62,9 @@ const App = () => {
         <Route path="/carbon" element={<Carbon />} />
         <Route path="/netzero" element={<Netzero />} />
         <Route path="/plastic" element={<Plastic />} />
+
+  {/* Blog */}
+     <Route path="/paris" element={<Article6Blog />} />
       </Routes>
 
       <Footer />
