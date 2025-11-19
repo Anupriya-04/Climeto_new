@@ -32,6 +32,8 @@ import Plastic from "./Services/Plastic";
 
 
 import Article6Blog from "./Blog/paris";
+import CarbonMarketLanding from "./Blog/Carbonmarket";
+import Cpcbsimp from "./Blog/cpcbsimp";
 
 const App = () => {
   return (
@@ -65,6 +67,13 @@ const App = () => {
 
   {/* Blog */}
      <Route path="/paris" element={<Article6Blog />} />
+     <Route path="/carbonMarketLanding" element={<CarbonMarketLanding />} />
+     <Route path="/cpcbsimp" element={<Cpcbsimp />}/>
+ 
+
+     
+     
+     
       </Routes>
 
       <Footer />
