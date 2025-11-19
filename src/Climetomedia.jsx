@@ -221,8 +221,8 @@ export default function ClimetoMedia() {
 const instagramPosts = [
   { imageUrl: "/insta1.jpg", postUrl: "https://www.instagram.com/p/DPx5lVOiqAH/" },
   { imageUrl: "/insta2.jpg", postUrl: "https://www.instagram.com/reel/DQ8j9I_CkMX/" },
-  { imageUrl: "/insta3.jpg", postUrl: "https://www.instagram.com/p/DPBlCDGiqpH/" },
-  { imageUrl: "/insta4.jpg", postUrl: "https://www.instagram.com/p/DMZjDKHhJgJ/" }
+  { imageUrl: "/instanew1.jpg", postUrl: "https://www.instagram.com/p/DPBlCDGiqpH/" },
+  { imageUrl: "/instanew2.jpg", postUrl: "https://www.instagram.com/p/DMZjDKHhJgJ/" }
 ];
 
 
