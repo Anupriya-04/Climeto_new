@@ -363,7 +363,7 @@ export default function EPRPlasticPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section
+      {/* <section
         id="contact"
         ref={contactRef}
         style={{
@@ -597,7 +597,7 @@ export default function EPRPlasticPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section

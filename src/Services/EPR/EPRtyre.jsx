@@ -206,7 +206,7 @@ export default function EPRTirePage() {
         </div>
       </div>
 
-      {/* Contact Form Section */}
+      {/* Contact Form Section
       <div className="bg-gradient-to-b from-white to-slate-100 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
@@ -339,7 +339,7 @@ export default function EPRTirePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

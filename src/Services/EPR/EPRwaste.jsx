@@ -231,7 +231,7 @@ export default function EPREWastePage() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-gradient-to-b from-white to-slate-100 py-12 sm:py-16 md:py-20">
+      {/* <div className="bg-gradient-to-b from-white to-slate-100 py-12 sm:py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-800 mb-3 sm:mb-4">
@@ -363,7 +363,7 @@ export default function EPREWastePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">

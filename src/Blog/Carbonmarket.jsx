@@ -66,13 +66,13 @@ export default function CarbonMarketLanding() {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+            {/* <button className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               Explore CCTS
               <ChevronRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
               Learn More
-            </button>
+            </button> */}
           </div>
 
           {/* Stats Grid */}
@@ -280,9 +280,9 @@ export default function CarbonMarketLanding() {
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105">
+            {/* <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105">
               Get Started Today
-            </button>
+            </button> */}
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
               Contact Bureau of Energy Efficiency
             </button>

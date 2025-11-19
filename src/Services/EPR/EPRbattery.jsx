@@ -452,7 +452,7 @@ export default function EPRBatteryPage() {
           }}>
             Let us handle your EPR compliance requirements
           </p>
-          <button
+          {/* <button
             style={{
               backgroundColor: 'white',
               color: '#667eea',
@@ -475,7 +475,7 @@ export default function EPRBatteryPage() {
             }}
           >
             Contact Us Today
-          </button>
+          </button> */}
         </div>
       </section>
     </div>

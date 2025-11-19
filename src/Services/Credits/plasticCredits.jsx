@@ -832,9 +832,9 @@ export default function PlasticCreditsGuide() {
             Every plastic credit purchased removes waste from our oceans and communities while supporting sustainable livelihoods and circular economy infrastructure
           </p>
           <div className="flex justify-center">
-            <button className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all">
+            {/* <button className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all">
               Download Complete Guide
-            </button>
+            </button> */}
           </div>
           <div className="mt-10 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div>
