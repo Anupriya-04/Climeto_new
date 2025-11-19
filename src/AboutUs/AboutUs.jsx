@@ -538,7 +538,7 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
   </div>
 </section>
       {/* Certifications & Partnerships */}
-      <section ref={el => sectionRefs.current['partners'] = el} className="py-24 px-6 bg-white">
+      {/* <section ref={el => sectionRefs.current['partners'] = el} className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <span className="px-4 py-2 bg-cyan-100 border border-cyan-300 rounded-full text-cyan-700 text-sm font-semibold inline-block mb-6">
@@ -561,7 +561,7 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery - Creative Carousel Style */}
       <section ref={el => sectionRefs.current['gallery'] = el} className="py-24 px-6 bg-gradient-to-b from-green-50 to-teal-50 overflow-hidden">
@@ -730,12 +730,12 @@ className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 text-
             Join us in building a sustainable future where responsibility is measurable, and change is inevitable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group relative px-10 py-5 bg-white rounded-full font-bold text-xl text-green-600 hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden">
+            {/* <button className="group relative px-10 py-5 bg-white rounded-full font-bold text-xl text-green-600 hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden">
               <span className="relative z-10">Get Started</span>
             </button>
             <button className="px-10 py-5 bg-transparent border-2 border-white rounded-full font-bold text-xl text-white hover:bg-white/10 transition-all duration-300 hover:scale-105">
               Learn More
-            </button>
+            </button> */}
           </div>
           
           <div className="flex gap-8 justify-center mt-16 text-white flex-wrap">

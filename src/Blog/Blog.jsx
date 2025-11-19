@@ -51,7 +51,8 @@ const allBlogs = [
     date: "Nov 8, 2025",
     readTime: "8 min read",
     author: "Devesh Malu",
-    icon: "recycle"
+    icon: "recycle",
+     route:"/extended-producer",
   },
   {
     id: 5,
@@ -62,7 +63,8 @@ const allBlogs = [
     date: "Nov 5, 2025",
     readTime: "10 min read",
     author: "Devesh Malu",
-    icon: "leaf"
+    icon: "leaf",
+    route: "/China-EPR",
   },
   {
     id: 6,
@@ -73,7 +75,8 @@ const allBlogs = [
     date: "Nov 3, 2025",
     readTime: "6 min read",
     author: "Devesh Malu",
-    icon: "leaf"
+    icon: "leaf",
+    route : "/EPR-india" ,
   },
   {
     id: 7,
@@ -84,7 +87,8 @@ const allBlogs = [
     date: "Nov 1, 2025",
     readTime: "9 min read",
     author: "Devesh Malu",
-    icon: "tree"
+    icon: "tree",
+    route : "/India-Strategy",
   },
   {
     id: 8,
@@ -95,7 +99,8 @@ const allBlogs = [
     date: "Oct 28, 2025",
     readTime: "7 min read",
     author: "Devesh Malu",
-    icon: "tree"
+    icon: "tree",
+    route:"/Nature-based",
   },
   {
     id: 9,
@@ -106,7 +111,8 @@ const allBlogs = [
     date: "Oct 25, 2025",
     readTime: "8 min read",
     author: "Devesh Malu",
-    icon: "droplet"
+    icon: "droplet",
+    route : "/Turning-platic"
   },
   {
     id: 10,
@@ -117,30 +123,32 @@ const allBlogs = [
     date: "Oct 22, 2025",
     readTime: "6 min read",
     author: "Devesh Malu",
-    icon: "recycle"
+    icon: "recycle",
+    route: "/Vinyl-India",
   },
-  {
-    id: 11,
-    title: "India’s Waste Management Landscape: Challenges, Reforms, and a Path Toward Circularity ",
-    excerpt: "India’s rapid urbanization and consumption patterns have led to a steep rise in waste generation—posing significant environmental and logistical challenges.",
-    image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800&h=400&fit=crop",
-    category: "Climate Action",
-    date: "Oct 20, 2025",
-    readTime: "11 min read",
-    author: "Devesh Malu",
-    icon: "leaf"
-  },
-  {
-    id: 12,
-    title: "Plastic-Free Living: Complete Guide",
-    excerpt: "Practical strategies to eliminate single-use plastics from your life and inspire others to do the same.",
-    image: "https://images.unsplash.com/photo-1591814230158-9b253036d793?w=800&h=400&fit=crop",
-    category: "Zero Waste",
-    date: "Oct 18, 2025",
-    readTime: "10 min read",
-    author: "Ocean Clean",
-    icon: "recycle"
-  }
+  // {
+  //   id: 11,
+  //   title: "India’s Waste Management Landscape: Challenges, Reforms, and a Path Toward Circularity ",
+  //   excerpt: "India’s rapid urbanization and consumption patterns have led to a steep rise in waste generation—posing significant environmental and logistical challenges.",
+  //   image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  //   category: "Climate Action",
+  //   date: "Oct 20, 2025",
+  //   readTime: "11 min read",
+  //   author: "Devesh Malu",
+  //   icon: "leaf",
+  //   route : "/India-Waste-Management",
+  // },
+  // {
+  //   id: 12,
+  //   title: "Plastic-Free Living: Complete Guide",
+  //   excerpt: "Practical strategies to eliminate single-use plastics from your life and inspire others to do the same.",
+  //   image: "https://images.unsplash.com/photo-1591814230158-9b253036d793?w=800&h=400&fit=crop",
+  //   category: "Zero Waste",
+  //   date: "Oct 18, 2025",
+  //   readTime: "10 min read",
+  //   author: "Ocean Clean",
+  //   icon: "recycle"
+  // }
 ];
 
 const BlogPage = () => {
@@ -314,9 +322,9 @@ const BlogPage = () => {
           <p className="text-green-50 mb-4">
             Every small action counts. Start your sustainability journey with us.
           </p>
-          <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-md">
+          {/* <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-md">
             Subscribe to Newsletter
-          </button>
+          </button> */}
         </div>
       </main>
     </div>

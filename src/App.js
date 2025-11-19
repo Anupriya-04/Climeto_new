@@ -34,6 +34,14 @@ import Plastic from "./Services/Plastic";
 import Article6Blog from "./Blog/paris";
 import CarbonMarketLanding from "./Blog/Carbonmarket";
 import Cpcbsimp from "./Blog/cpcbsimp";
+import Extendedproducer from "./Blog/Extendesproducer";
+import Indiawaste from "./Blog/IndiaWaste";
+import Chinaepr from "./Blog/Chinaepr";
+import VinylIndia from "./Blog/Vinylindia";
+import Turningplastic from "./Blog/Turningplastic";
+import EPRindia from "./Blog/EPRindia";
+import Indiastrategy from "./Blog/Indiastrategy";
+import Naturebased from "./Blog/Naturebased";
 
 const App = () => {
   return (
@@ -69,10 +77,14 @@ const App = () => {
      <Route path="/paris" element={<Article6Blog />} />
      <Route path="/carbonMarketLanding" element={<CarbonMarketLanding />} />
      <Route path="/cpcbsimp" element={<Cpcbsimp />}/>
- 
-
-     
-     
+          <Route path="/extended-producer" element={<Extendedproducer />}/>
+              <Route path="/India-Waste-Management" element={<Indiawaste />}/>
+  <Route path="/China-EPR" element={<Chinaepr />}/>
+ <Route path="/Vinyl-India" element={<VinylIndia />}/>
+      <Route path="/Turning-platic" element={<Turningplastic />}/>
+        <Route path="/EPR-india" element={<EPRindia />}/>
+         <Route path="/India-Strategy" element={<Indiastrategy />}/>
+         <Route path="/Nature-based" element={<Naturebased />}/>
      
       </Routes>
 

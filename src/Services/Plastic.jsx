@@ -36,10 +36,10 @@ export default function PlasticWasteLanding() {
         </p>
 
         <div className="flex gap-4 mb-16">
-          <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2">
+          {/* <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2">
             Explore Services
             <span>→</span>
-          </button>
+          </button> */}
          
         </div>
 

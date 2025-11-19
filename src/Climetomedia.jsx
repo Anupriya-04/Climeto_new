@@ -458,7 +458,7 @@ const instagramPosts = [
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button
-                onClick={() => window.open('https://linktr.ee/climeto', '_blank')}
+                onClick={() => window.open('/blog', '_blank')}
                 className="px-8 py-3 bg-white text-green-700 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg shadow-green-700/40"
               >
               Read Our Blogs 

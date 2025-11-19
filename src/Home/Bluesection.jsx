@@ -18,7 +18,7 @@ export default function Bluesection() {
       id: 1,
       title: "Article 6 of the Paris Agreement & Carbon Markets: Detailed Guide for 2025",
       image: blogImg,
-      link: "/blog",
+      link: "/paris",
       featured: true,
     },
     {
@@ -26,14 +26,14 @@ export default function Bluesection() {
       title:
         "Revised Guidelines for Environmental Compensation on Plastic Waste Management Violations",
       image: guidelineImg,
-      link:"/revised-guide",
+      link:"/India-Strategy",
     },
     {
       id: 3,
       title:
         "India’s commitment to achieving net-zero emissions by 2070",
       image: treeImg,
-      link: "/india-commitment",
+      link: "/Nature-based",
     },
   ];
 
