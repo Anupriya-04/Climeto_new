@@ -785,7 +785,7 @@ export default function CpcbSimpBlog() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      {/* <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -815,7 +815,7 @@ export default function CpcbSimpBlog() {
             <p className="mt-2">Last updated: January 2025</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
